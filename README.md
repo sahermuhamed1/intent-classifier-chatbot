@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Intent Classifier Chatbot
 emoji: 🤖
@@ -14,6 +15,12 @@ short_description: Intent Detection API using BERT and Flask
 
 **Intent Detection API using BERT and Flask**  
 This project uses a fine-tuned BERT model that is an encoder only model without a decoder used to detect user intent from text inputs (e.g., chatbot queries). It provides a lightweight Flask API to classify input sentences into predefined intent categories.
+=======
+# 🤖 Bert Intent Chatbit
+
+**Intent Detection API using BERT and Flask**  
+This project uses a fine-tuned BERT model to detect user intent from text inputs (e.g., chatbot queries). It provides a lightweight Flask API to classify input sentences into predefined intent categories.
+>>>>>>> 3b1a096760cdbb6629d54b32bf43ac1bafaafce9
 
 ---
 
@@ -25,6 +32,7 @@ This project uses a fine-tuned BERT model that is an encoder only model without 
 - 🤖 Easy to integrate with chatbots, voice assistants, or NLP systems
 
 ---
+<<<<<<< HEAD
 ## 📊 Dataset: CLINC150
 
 The project uses the **CLINC150 dataset**, a benchmark dataset for intent classification in task-oriented dialogue systems.
@@ -52,10 +60,14 @@ The project uses the **CLINC150 dataset**, a benchmark dataset for intent classi
 
 
 ---
+=======
+
+>>>>>>> 3b1a096760cdbb6629d54b32bf43ac1bafaafce9
 ## 🚀 Example
 
 ### Request
 ```bash
+<<<<<<< HEAD
 {
   "text": "I want to book a flight"
 }
@@ -133,3 +145,11 @@ Example `config.json` for inference API:
 - Make sure your `requirements.txt` lists all dependencies.
 - The `entrypoint` should point to your main app file (e.g., `app.py` or `main.py`).
 - For more details and advanced configuration, see the [Spaces config reference](https://huggingface.co/docs/hub/spaces-config-reference).
+=======
+POST /predict
+Content-Type: application/json
+
+{
+  "text": "I want to book a flight"
+}
+>>>>>>> 3b1a096760cdbb6629d54b32bf43ac1bafaafce9
