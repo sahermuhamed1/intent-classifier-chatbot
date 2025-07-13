@@ -63,11 +63,10 @@ The project uses the **CLINC150 dataset**, a benchmark dataset for intent classi
 ## 🧑🏻‍💻 Usage
 
 1. Run the Dockerfile as a container to set up the environment.  
-2. Train BERT and save the fine-tuned model by running *`training/workspace.ipynb`*.  
-3. After training, the model will be saved in your base directory.  
-4. Start the FastAPI server by running *`model/api/start_server.py`*.  
-5. (Optional) Test the FastAPI endpoint by running *`model/api/test.py`*.  
-6. Run the Flask web application by executing *`src/main.py`*.  
+2. Load the pretrained Intent BERT model and tokenizer by executing *`model/api/api.py`*
+2. Start the FastAPI server by running *`model/api/start_server.py`*.  
+3. (Optional) Test the FastAPI endpoint by running *`model/api/test.py`*.  
+4. Run the Flask web application by executing *`src/main.py`*.  
 
 
 ## 🙋🏻‍♂️ Author

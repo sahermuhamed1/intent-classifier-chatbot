@@ -7,23 +7,10 @@ import torch
 import os
 
 app = FastAPI(title="Intent Classifier API", description="BERT-based intent classification system")
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
-# Get the absolute path to the model directory
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# go back one level to get the correct path
-BASE_DIR = os.path.dirname(BASE_DIR)
-MODEL_DIR = os.path.join(BASE_DIR, "intent_classifier_model")
-TOKENIZER_DIR = os.path.join(BASE_DIR, "intent_classifier_tokenizer")
-
-# Ensure model and tokenizer directories exist  
-if not os.path.isdir(MODEL_DIR):
-    raise FileNotFoundError(f"Model directory not found: {MODEL_DIR}")
-if not os.path.isdir(TOKENIZER_DIR):
-    raise FileNotFoundError(f"Tokenizer directory not found: {TOKENIZER_DIR}")
-
-# Load model and tokenizer from local directories only
-model = BertForSequenceClassification.from_pretrained(MODEL_DIR, local_files_only=True)
-tokenizer = BertTokenizer.from_pretrained(TOKENIZER_DIR, local_files_only=True)
+tokenizer = AutoTokenizer.from_pretrained("SaherMuhamed/bert-intention-classifier")
+model = AutoModelForSequenceClassification.from_pretrained("SaherMuhamed/bert-intention-classifier")
 
 # Complete CLINC150 intent labels in exact order (151 total)
 INTENT_LABELS = ['restaurant_reviews',
