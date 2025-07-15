@@ -1,7 +1,10 @@
 # 🤖 Intent Classification Chatbot
 
-**Intent Detection API using BERT and Flask**  
+**Intent Detection using BERT deployed by Fast API in a Flask Application**  
 This project uses a fine-tuned BERT model that is an encoder only model without a decoder used to detect user intent from text inputs (e.g., chatbot queries). It provides a lightweight Flask API to classify input sentences into predefined intent categories.
+
+### 🌐 Access the **Chatbot Application** from [HERE](https://huggingface.co/spaces/SaherMuhamed/intent-classifier-chatbot)
+### 🤗 Access the **Huggingface pretrained Model** from [HERE](https://huggingface.co/SaherMuhamed/bert-intention-classifier)
 
 
 ## 🔧 Features
